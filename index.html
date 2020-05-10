@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movie-search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <style type="text/css">
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 600px;
+      height: 900px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    a:visited {
+      color: #000;
+    }
+
+    .wrapp {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+    }
+
+    input {
+      border: 0;
+    }
+    img{
+      width: 300px;
+    }
+    #input{
+      width: 505px;
+    }
+    @media screen and (max-width: 600px) {
+      .wrapp {
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+    }
+    img{
+      width: 200px;
+    }
+    .swiper-container {
+      width: 300px;
+      height: 450px;
+    }
+    #input{
+      width: 205px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapp">
+    <input id="input" autocomplete="off" placeholder='Search...' type="text"><input type="button" id="doSearch"
+      value="Go search" onclick="rnd()"><input type="button" value="X" onclick="clearThat()">
+  </div>
+  <div class="swiper-container" id="swiper-wrapper">
+    <div class="swiper-wrapper" id="swiper-wrapper1">
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+      <div id="swiper-slide" class="swiper-slide">
+        <div id="post"><img id="poster" ><br><a id="name" href="" target="_blank"></a><br><span
+            id="year"></span><br><img src="./assets/download.png" style="width: 15px;"><span id="raiting">Empty</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <div id="list">
+
+
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
