@@ -43,7 +43,7 @@ function paste() {
   raiting()
   for (let i = 0; i < xhr.response.Search.length; i++) {
     if (xhr.response.Search[i].Poster == "N/A") {
-      document.querySelectorAll("#poster")[i].src = 'https://lh3.googleusercontent.com/proxy/qbS9SbyEH5ZX8g-WvVVroPISvXgTW5Tlm4vwExxdUZRdeg_kH7CyKFNYy7MVYhHCXhFwV9js2Sb8enHDvOH3Er7CjN_ykw7AbzDaZnIur4NvM8ENNg'
+      document.querySelectorAll("#poster")[i].src = './assets/img-not-found.jpg'
     } else {
       document.querySelectorAll("#poster")[i].src = xhr.response.Search[i].Poster
     }
